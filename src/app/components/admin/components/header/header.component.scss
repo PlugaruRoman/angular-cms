@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #696969;
+  align-items: center;
+  color: #ffffff;
+  padding: 0px 20px;
+  .nav-menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    .nav-menu__item {
+      color: #ffffff;
+      text-decoration: none;
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

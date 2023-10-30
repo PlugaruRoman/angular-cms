@@ -1,0 +1,28 @@
+<div class="contacts-container">
+  <mat-progress-bar
+    *ngIf="isLoading | async"
+    mode="indeterminate"
+    class="progress-bar"
+    [color]="'primary'"
+  >
+  </mat-progress-bar>
+
+  <div *ngFor="let user of contactsList | async">
+    <mat-card class="contacts-card">
+      <mat-card-content class="contacts-card-content">
+        <span class="contacts-card-item">{{ user.name }}</span>
+        <span class="contacts-card-item">{{ user.email }}</span>
+        <span class="contacts-card-item">{{ user.company.name }}</span>
+
+        <button
+          mat-raised-button
+          color="primary"
+          class="contacts-card-button"
+          [routerLink]="['user', user.id]"
+        >
+          Details
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

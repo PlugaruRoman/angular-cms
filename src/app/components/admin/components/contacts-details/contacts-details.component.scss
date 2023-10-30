@@ -1,0 +1,17 @@
+.contacts-card {
+  width: 300px;
+  height: 280px;
+  margin-top: 20px;
+
+  &-content {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  &-item {
+    margin-top: 5px;
+  }
+  &-button {
+    margin-top: 60px;
+  }
+}

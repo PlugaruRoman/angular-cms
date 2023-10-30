@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="login-card">
+    <h1 class="header">Login Page</h1>
+
+    <form
+      class="login-form"
+      [formGroup]="formGroup"
+      (input)="(onChangeForm)"
+      (submit)="onSubmit()"
+    >
+      <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input required matInput placeholder="Login" formControlName="login" />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          required
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+
+      <mat-error>{{ formError }}</mat-error>
+
+      <button
+        type="submit"
+        class="login-form-button"
+        [disabled]="formGroup.invalid || !!formError"
+        mat-raised-button
+        color="primary"
+      >
+        Login
+      </button>
+    </form>
+
+    <p class="sign-up">Don't have an account? Sign Up</p>
+  </div>
+</div>

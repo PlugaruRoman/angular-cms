@@ -1,0 +1,19 @@
+<mat-card class="contacts-card">
+  <mat-card-content *ngIf="user | async as user" class="contacts-card-content">
+    <span class="contacts-card-item">{{ user?.name }}</span>
+    <span class="contacts-card-item">{{ user?.email }}</span>
+    <span class="contacts-card-item">{{ user?.company?.name }}</span>
+    <span class="contacts-card-item">{{ user?.phone }}</span>
+    <span class="contacts-card-item">{{ user?.website }}</span>
+    <span class="contacts-card-item">{{ user?.address?.street }}</span>
+
+    <button
+      mat-raised-button
+      color="primary"
+      class="contacts-card-button"
+      (click)="showUser()"
+    >
+      Back
+    </button>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,40 @@
+.container{
+  min-height: 100vh;
+  background-color: #2884b8;
+  background-image: linear-gradient(315deg, #2884b8 0%, #d1bad2 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+.login-card{
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+
+  .header{
+    color:#ffffff;
+    align-self: center;
+  }
+
+  .login-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin: 40px auto;
+      &-button {
+        margin-top: 30px;
+        width: 50%;
+        align-self: flex-end;
+      }
+    }
+
+    .sign-up{
+      align-self: center;
+      color: #ffffff;
+    }
+}
